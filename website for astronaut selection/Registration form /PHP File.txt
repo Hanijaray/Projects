@@ -1,0 +1,27 @@
+<?php
+if(!isset($_POST['submit']))
+{
+$uname=$_POST['uname'];
+$uemail=$_POST['uemail'];
+$ucity=$_POST['ucity'];
+$uage=$_POST['uage'];
+$uedu=$_POST['uedu'];
+$umark=$_POST['umark'];
+$ubmi=$_POST['ubmi'];
+$umob=$_POST['umob'];
+$con=mysqli_connect("localhost:3306","root","T#9758@qlph","student");
+$sql="INSERT INTO form
+(aname,aemail,acity,aage,aedu,amark,abmi,amob)
+VALUES
+('$uname','$uemail','$ucity','$uage','$uedu','$umark','$ubmi','$umob')";
+$result=mysqli_query($con,$sql);
+if($result)
+{
+echo "Registration successfull";
+}
+else
+{
+echo "regisr";
+}
+}
+?>
