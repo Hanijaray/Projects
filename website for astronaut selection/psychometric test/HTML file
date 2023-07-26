@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mental test</title>
+	<script src="psyc.js" defer></script>
+	<style>
+	a{
+		display: block;
+		height: 80px;
+		width: 250px;
+		position: absolute;
+		place-items: center;
+		font-size: 20px;
+		font-weight: 500;
+		text-decoration: none;
+		border-radius: 5px;
+	}
+	body
+	{
+		background :#FFE4B5;
+	}
+
+	</style>
+</head>
+<body>
+1.Been upset because of something that happened unexpectedly?<br><br>
+<input type="radio" name="question1" >Never<br>
+<input type="radio" name="question1" id="correct1" >Sometimes<br>
+<input type="radio" name="question1" >Fairly often<br>
+<input type="radio" name="question1" >Very often<br>
+2.Felt that you were unable to control important things in your life?<br><br>
+<input type="radio" name="question2" id="correct2" >Never<br>
+<input type="radio" name="question2" >Sometimes<br>
+<input type="radio" name="question2" >Fairly often<br>
+<input type="radio" name="question2" >Very often<br>
+3.Felt nervous and stressed?<br><br>
+<input type="radio" name="question3" id="correct3" >Never<br>
+<input type="radio" name="question3" >Sometimes<br>
+<input type="radio" name="question3" >Fairly often<br>
+<input type="radio" name="question3" >Very often<br>
+4.Felt confident about your ability to handle your peronal problems?<br><br>
+<input type="radio" name="question4" >Never<br>
+<input type="radio" name="question4" >Sometimes<br>
+<input type="radio" name="question4" >Fairly often<br>
+<input type="radio" name="question4" id="correct4" >Very often<br>
+5.Felt that things were going your way?<br><br>
+<input type="radio" name="question5" >Never<br>
+<input type="radio" name="question5" >Sometimes<br>
+<input type="radio" name="question5" >Fairly often<br>
+<input type="radio" name="question5" id="correct5" >Very often<br>
+6.Been able to control irritations in your life?<br><br>
+<input type="radio" name="question6" >Never<br>
+<input type="radio" name="question6" >Sometimes<br>
+<input type="radio" name="question6" id="correct6" >Fairly often<br>
+<input type="radio" name="question6" >Very often<br>
+7.Found that you could NOT cope with all the things you had to do?<br><br>
+<input type="radio" name="question7" id="correct7">Never<br>
+<input type="radio" name="question7" >Sometimes<br>
+<input type="radio" name="question7" >Fairly often<br>
+<input type="radio" name="question7" >Very often<br>
+8.Felt that you were on top of things?<br><br>
+<input type="radio" name="question8" >Never<br>
+<input type="radio" name="question8" id="correct8" >Sometimes<br>
+<input type="radio" name="question8" >Fairly often<br>
+<input type="radio" name="question8" >Very often<br>
+9.Been angered because of things that happened that were out of your control?<br><br>
+<input type="radio" name="question9" id="correct9">Never<br>
+<input type="radio" name="question9" >Sometimes<br>
+<input type="radio" name="question9" >Fairly often<br>
+<input type="radio" name="question9" >Very often<br>
+10.Felt difficulties were piling up so high that you could not overcome them?<br><br>
+<input type="radio" name="question10" >Never<br>
+<input type="radio" name="question10" id="correct10" >Sometimes<br>
+<input type="radio" name="question10" >Fairly often<br>
+<input type="radio" name="question10" >Very often<br><br>
+<button id="btn">submit</button><br><br>
+<a href ="file:///C:/wamp64/www/project/form.html">FORM</a>
+</body>
+</html>
+
+
+
