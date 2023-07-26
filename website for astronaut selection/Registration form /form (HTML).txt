@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"content="IE=edge">
+	<meta name="viewport"content="width=device-width,initial-scale=1.0">
+	<style>
+	h1{
+		margin: 50px 50px 50px 50px;
+		font-size:40px;
+		color: black;
+		
+	}
+	body
+	{
+		background :#CCFB5D;
+		font-size:25px;
+		margin: 100px 100px;
+	}
+	</style>
+</head>
+<body><center>
+<h1>Registration Form</h1>
+<form method="post" action="form.php">
+<label>Enter your Name:</label>
+<input type="text" name="uname"><br><br><br>
+<label>Enter E-mail id:</label>
+<input type="text" name="uemail"><br><br><br>
+<label>Enter Your city:</label>
+<input type="text" name="ucity"><br><br><br>
+<label>Enter your age:</label>
+<input type="text" name="uage"><br><br><br>
+<label>Educational Qualification:</label>
+<input type="text" name="uedu"><br><br><br>
+<label>Enter your 12th mark:</label>
+<input type="text" name="umark"><br><br><br>
+<label>Enter your BMI value:</label>
+<input type="text" name="ubmi"><br><br><br>
+<label>Enter your mobile number</lable>
+<input type="text" name="umob"><br></center>
+<center><br><br>
+<button id="submit">Register</button>
+</center>
+</form>
+</body>
+</html>
+
