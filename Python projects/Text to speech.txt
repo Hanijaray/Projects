@@ -1,0 +1,11 @@
+import pyttsx3
+engine = pyttsx3.init()
+engine.setProperty("rate",120)
+engine.setProperty("volume",0.8)
+voices = engine.getProperty("voices")
+print("Female voice:{0}".format(voices[1].id))
+engine.setProperty("voice", voices[1].id)
+engine.say("Hello This is hanijaray,I am studing in holycross engineering college.currently i am looking for internship opportunity.Thank you for check my code.")
+engine.save_to_file(" Hello This is hanijaray,I am studing in holycross engineering college.currently i am looking for internship opportunity.Thank you for check my code.","tt1.mp3")
+engine.runAndWait()
+engine.stop()
