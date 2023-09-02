@@ -1,0 +1,188 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Banner Creator</title>
+    <style>
+        
+        .banner {
+            width: 1600px;
+            height: 900px;
+            background-color: #3498db;
+            color: #ffffff;
+            text-align: center;
+            font-size: 24px;
+            line-height: 200px;
+	    position: relative;
+        }
+	 #bannerText {
+            position: absolute;
+        }
+
+       
+        .form {
+            margin-right: 40px;
+	    margin-left: 40px;
+	    margin-top: 50px;
+	    margin-bottom: 10px;
+        }
+
+        .button {
+            margin-top: 10px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="form">
+    <label for="bannerSize">Choose Banner Size:</label>
+    <select id="bannerSize" onchange="changeBannerSize()">
+        <option value="s">1600*900</option>
+        <option value="m">1080*1080</option>
+        <option value="l">1080*1920</option>
+    </select>
+</div>
+<div class="form">
+	
+    <label for="fontSize">Font Size:</label>
+    <select id="fontSize" onchange="changeFontSize()">
+        <option value="14">14</option> 
+	<option value="16">16</option>
+        <option value="24">24</option>
+        <option value="28">28</option>
+	<option value="36">36</option>
+    </select>
+</div>
+<div class="form">
+
+    <label for="fontColor">Font Color:</label>
+    <input type="color" id="fontColor" onchange="changeFontColor()">
+</div>
+<div class="form">
+	
+    <label for="ctaMessage">Call to Action Message:</label>
+    <input type="text" id="ctaMessage" oninput="changeCTAMessage()">
+</div>
+<div class="form">
+
+    <label for="ctaLink">Call to Action Link:</label>
+    <input type="text" id="ctaLink" oninput="changeCTALink()">
+</div>
+<div class="form">
+
+    <label for="xCoordinate">X Coordinate:</label>
+    <input type="number" id="xCoordinate" oninput="changeTextPosition()">
+    
+    <label for="yCoordinate">Y Coordinate:</label>
+    <input type="number" id="yCoordinate" oninput="changeTextPosition()">
+    
+    <label for="backgroundColor">Background Color:</label>
+    <input type="color" id="backgroundColor" onchange="changeBackgroundColor()">
+
+    <label for="imageUpload">Upload Image:</label>
+    <input type="file" id="imageUpload" accept="image/*" onchange="changeBannerImage(event)">
+</div>
+
+
+
+    <div class="banner" id="banner">
+        <img id="bannerImage" src="default-image.jpg" alt="Banner Image" width="100%" height="100%">
+        Your Banner Text
+	<div id="ctaButton">
+            <a href="#" id="ctaLinkButton" target="_blank">CTA Button</a>
+        </div>
+    </div>
+<div class="button">
+    <button onclick="changeBannerText()">Change Text</button</div>
+
+    <script>
+        // JavaScript function to change the banner size
+        function changeBannerSize() {
+            var bannerSize = document.getElementById("bannerSize").value;
+            var banner = document.getElementById("banner");
+            var bannerImage = document.getElementById("bannerImage");
+
+            switch (bannerSize) {
+                case "s":
+                    banner.style.width = "1600px";
+		    banner.style.height = "900px";
+                    break;
+                case "m":
+		    banner.style.width = "1080px";
+                    banner.style.height = "1080px";
+                    break;
+                case "l":
+		    banner.style.width = "1080px";
+                    banner.style.height = "1920px";
+                    break;
+                default:
+		     banner.style.width = "1080px";
+                    banner.style.height = "1080px"; 
+                    break;
+            }
+        }
+
+        //  change the font size
+        function changeFontSize() {
+            var fontSize = document.getElementById("fontSize").value;
+            document.getElementById("banner").style.fontSize = fontSize + "px";
+        }
+
+        //  to change the font color
+        function changeFontColor() {
+            var fontColor = document.getElementById("fontColor").value;
+            document.getElementById("banner").style.color = fontColor;
+        }
+	 function changeCTAMessage() {
+            var ctaMessage = document.getElementById("ctaMessage").value;
+            var ctaLinkButton = document.getElementById("ctaLinkButton");
+            ctaLinkButton.innerText = ctaMessage;
+        }
+
+        // change the CTA link
+        function changeCTALink() {
+            var ctaLink = document.getElementById("ctaLink").value;
+            var ctaLinkButton = document.getElementById("ctaLinkButton");
+            ctaLinkButton.href = ctaLink;
+        }
+
+        // change the banner text
+        function changeBannerText() {
+            var newText = prompt("Enter new text for the banner:");
+            if (newText !== null) {
+                document.getElementById("banner").innerText = newText;
+            }
+        }
+	
+	 function changeTextPosition() {
+            var xCoordinate = document.getElementById("xCoordinate").value + "px";
+            var yCoordinate = document.getElementById("yCoordinate").value + "px";
+            var bannerText = document.getElementById("bannerText");
+            
+            bannerText.style.left = xCoordinate;
+            bannerText.style.top = yCoordinate;
+        }
+
+	function changeBackgroundColor() {
+            var backgroundColor = document.getElementById("backgroundColor").value;
+            document.getElementById("banner").style.backgroundColor = backgroundColor;
+        }
+	
+	 function changeBannerImage(event) {
+            var imageFile = event.target.files[0];
+            var bannerImage = document.getElementById("bannerImage");
+
+            if (imageFile) {
+                var imageUrl = URL.createObjectURL(imageFile);
+                bannerImage.src = imageUrl;
+            } else {
+                bannerImage.src = "default-image.jpg"; // Restore the default image if no file is selected
+            }
+        }
+	 
+
+    </script>
+</body>
+</html>
